@@ -16,6 +16,8 @@ public class MlazUser {
 	
 	private String emailAdrress;
 	
+	private String address;
+	
 	private MlUserSource originSource;
 	
 	@DynamoDBHashKey(attributeName = "userId")
@@ -61,6 +63,15 @@ public class MlazUser {
 
 	public void setOriginSource(MlUserSource originSource) {
 		this.originSource = originSource;
+	}
+
+	@DynamoDBAttribute
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 }
